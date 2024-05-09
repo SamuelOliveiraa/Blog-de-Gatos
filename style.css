@@ -132,7 +132,7 @@ footer {
   text-align: center;
   color: var(--color-base-white);
   font-size: 1.6rem;
-}   
+}     
   
 @media (min-width: 650px) {
   main .article {
