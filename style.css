@@ -13,17 +13,26 @@
   --color-base--black: #121214;
 }
 
+body,
+html {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--color-base-blue);
+  font-family: "Mulish", sans-serif;
+  overflow-x: hidden;
+}
+
 header,
 footer {
-  background-color: var(--color-base-blue);
   padding: 1rem 2.8rem;
 }
 header {
-  
+  max-width: 150rem;
   display: grid;
   grid-template-columns: 4.2rem 1fr 4.2rem;
   align-items: center;
   gap: 2.4rem;
+  margin: 0 auto;
 }
 header .img-container,
 header .logo-container {
@@ -42,6 +51,138 @@ header input::placeholder {
   font-size: 1.5rem;
   color: var(--color-base-gray-100);
 }
+
+main {
+  background-color: var(--color-base-white);
+  padding-bottom: 3rem;
+}
+main .container .img-container {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+main .container .img-container img,
+main .article .card-container .card-article img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+main .container .text-container {
+  padding: 0 2.3rem;
+}
+main .container .text-container .buttons-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+main .container .text-container .buttons-container span {
+  display: flex;
+  width: 3.5rem;
+  height: 3.5rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--color-base-blue);
+}
+
+main .container .text-container p {
+  font-size: 1.6rem;
+  line-height: 3rem;
+}
+main .container .text-container p + p {
+  margin-top: 2rem;
+}
+main .article {
+  margin: 0 auto;
+  padding: 0 2.3rem;
+  margin-top: 3rem;
+}
+main .article .card-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+}
+main .article h2 {
+  font-size: 2.4rem;
+}
+main .article .card-container .card-article {
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+main .article .card-container .card-article .text-container h2 {
+  font-size: 1.7rem;
+}
+main .article .card-container .card-article .text-container p {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin-top: 0.6rem;
+}
+main .article .card-container .card-article img {
+  min-width: 18rem;
+  border-radius: 0.6rem;
+}
+
 footer {
   text-align: center;
+  color: var(--color-base-white);
+  font-size: 1.6rem;
+}
+
+@media (min-width: 650px) {
+  main .article {
+    max-width: 95rem;
+  }
+  main .article .card-container .card-article {
+    flex-direction: column;
+  }
+  main .article .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (min-width: 800px) {
+  main .content {
+    max-width: 150rem;
+    margin: 0 auto;
+    padding-top: 4.4rem;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+  }
+  main .container .img-container img {
+    border-radius: 0.6rem;
+  }
+  main .article {
+    max-width: 40rem;
+    margin-top: 0;
+  }
+}
+@media (min-width: 950px) {
+  main .text-container h1{
+    font-size: 2.6rem;
+  }
+  main .content .container .text-container p{
+    font-size: 1.9rem;
+    line-height: 4.3rem;
+  }
+
+  main .text-container .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem ;
+  }
+  main .text-container .header-container .buttons-container {
+    margin: 0;
+  }
+
+  main .article .card-container .card-article {
+    display: flex;
+  }
 }
