@@ -128,7 +128,7 @@ main .article .card-container .card-article img {
   border-radius: 0.6rem;
 }
    
-footer {
+footer {   
   text-align: center;
   color: var(--color-base-white);
   font-size: 1.6rem;
