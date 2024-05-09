@@ -139,8 +139,8 @@ footer {
     max-width: 95rem;
   }
   main .article .card-container .card-article {
-    flex-direction: column;
-  }
+    flex-direction: column; 
+  } 
   main .article .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
